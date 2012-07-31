@@ -1,10 +1,19 @@
-@import "library.less";
+@import "./fonts.less";
+@font-family: "KomikaAxisRegular";
 
-h1 {
-  width: 100%;
-  text-align: center;
-  margin: 36px 0 40px 0;
-  
-  font-size: 237.5%;
+* {
+  margin: 0;
+  padding: 0;
+}
+
+body {
+/*  if $background-image
+    background-image: $background-image
+  if $background-color
+    background-color: lighten($color, 10)
+  else
+    background-color: transparent*/
+  font-family: @font-family;
   color: #fff;
+  font-size: 100%;
 }
