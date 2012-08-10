@@ -1,4 +1,4 @@
 plico-less
 ==========
 
-Submodule with LESS stylesheets for Plico
+Submodule with Stylus stylesheets for Plico

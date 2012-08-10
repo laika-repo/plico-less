@@ -1,0 +1,136 @@
+.quiz
+  .header
+    h1
+      margin: 15px 0 20px
+      font-size: 200%
+      line-height: 120%
+      stroke(2px, #000)
+    
+    h2
+      margin-bottom: 20px
+      text-transform: none
+      text-shadow: none
+      font-weight: normal
+      font-size: 137.5%
+      color: darken($color, 10)
+      
+
+  .answer-container
+    .answer
+      frame(15px);
+
+      .content
+        text-align: center;
+      
+        .image
+          position: relative;
+          image-shadow(inset 1px 1px 1px rgba(0,0,0,0.5), 12px)
+        
+          .overlay
+            display: none;
+        
+          .symbol
+            z-index: 1;
+            display: none;
+            position: absolute;
+            left: 50%;
+            top: 50%;
+            width: 100%;
+            height: 100%;
+            background-repeat: no-repeat;
+        
+          img
+            box-shadow: 1px 1px 0 rgba(255,255,255,0.5);
+
+    .description
+      z-index: 2
+    
+      display: none;
+      position: relative;
+
+      width: 80%;
+      margin: -10% auto 0;
+      padding: 6px;
+
+      border-radius: 15px;
+      gradient(rgb(255,228,0) 8%, rgb(255,210,0) 54%);
+      box-shadow: 1px 1px rgb(0,0,0), inset 0px 1px rgba(255,255,255,0.5);
+
+      .content
+        background: #fff;
+
+        border-radius: 12px;
+        box-shadow: inset 1px 1px rgba(0,0,0,0.6);
+      
+        .ie6 &,
+        .ie7 &,
+        .ie8 &
+          ie-shadow()
+
+        h3
+          padding: 10px;
+  
+    &.correct, &.incorrect
+      .answer
+        .image
+          .overlay
+            position: absolute;
+            display: block;
+            width: 100%;
+            height: 100%;
+            background-color: #000;
+            border-radius: 12px;
+            opacity(0.7)
+        
+          .symbol
+            display: block;
+  
+    &.correct
+      .answer
+        background-color: #225c00;
+        .content
+          gradient(rgb(110,231,0) 8%, rgb(65,172,0) 54%);
+        
+          .symbol
+            background-image: url(images/quiz/correct.png);
+            margin-left: -82px;
+            margin-top: -78px;
+    
+      .description
+        gradient(rgb(91,206,0) 8%, rgb(64,171,0) 54%);
+
+    &.incorrect
+      .answer
+        background-color: #8e0000;
+        .content
+          gradient(rgb(244,3,3) 8%, rgb(215,2,2) 54%);
+        
+          .symbol
+            background-image: url(images/quiz/incorrect.png);
+            margin-left: -79px;
+            margin-top: -79px;
+
+      .description
+        gradient(rgb(231,3,3) 8%, rgb(215,2,2) 54%);
+  
+    &.answered
+      .description
+        display: block;
+
+  @media only screen and (min-width: 768px) and (max-width: 959px)
+    .answer-container
+      .answer
+        .content
+          .image
+            img
+              width: 246px
+              height: 400px
+
+  @media only screen and (max-width: 768px)
+    .answer-container
+      .answer
+        .content
+          .image
+            img
+              width: 198px
+              height: 322px

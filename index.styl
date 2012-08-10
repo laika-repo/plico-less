@@ -1,7 +1,10 @@
+@import './style/base.css'
+@import './style/skeleton.css'
+
 @import './library'
 
 @import './fonts'
-/*@import './themes/haarlem'*/
+@import './themes/haarlem'
 
 @import './shared/mixin'
 @import './shared/dialog'
@@ -19,13 +22,13 @@
   padding: 0
 
 body
-  // if $background-image
-  //   background-image: $background-image
-  // if $background-color
-  //   background-color: lighten($color, 10)
-  // else
-  //   background-color: transparent
-  // font-family: $font-family
+  if $background-image
+    background-image: $background-image
+  if $background-color
+    background-color: lighten($color, 10)
+  else
+    background-color: transparent
+  font-family: $font-family
   color: #fff
   font-size: 100%
 
@@ -36,28 +39,28 @@ h1
   
   font-size: 237.5%
   color: #fff
-  // if $stroke 
-  //     stroke(3px, darken($color, 10))
+  if $stroke 
+    stroke(3px, darken($color, 10))
     
 h2
   text-transform: uppercase
   text-align: center
   
   font-size: 187.5% // 30 / 16
-  // if $stroke 
-  //     stroke(2px, darken($color, 6))
+  if $stroke 
+    stroke(2px, darken($color, 6))
   
 h3
-  // if $stroke
-  //     color: #fff
-  //     stroke(2px, darken($color, 20), false)
-  //     
-  //     .ie6 &,
-  //     .ie7 &,
-  //     .ie8 &
-  //       color: darken($color, 20)
-  //   else
-  //     color: darken($color, 20)
+  if $stroke
+    color: #fff
+    stroke(2px, darken($color, 20), false)
+    
+    .ie6 &,
+    .ie7 &,
+    .ie8 &
+      color: darken($color, 20)
+  else
+    color: darken($color, 20)
   
   text-align: center
   font-size: 112.5% // 18 / 16 
@@ -72,3 +75,10 @@ a, a:visited
   
 dd, dt
   display: inline
+  
+.header 
+  h1 
+    margin: 0 0 0 0
+  h2 
+    margin: 0 0 0 0
+    font-size:  1.2em
