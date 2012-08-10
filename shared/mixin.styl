@@ -10,7 +10,7 @@ double_stroke(width1 = 3px, color1 = #000, width2 = 2px, color2 = #fff, shadow =
     ie-stroke(color1)
 
 frame($radius = 12px, $container = '.content')
-  // background-color: darken($border-color, 20)
+  background-color: darken($border-color, 20)
   border-radius: $radius
   
   box-shadow: 1px 1px 1px rgb(0,0,0), inset -5px -0px 5px rgba(0,0,0,0.2)
@@ -20,7 +20,7 @@ frame($radius = 12px, $container = '.content')
 
   {$container}
     border-radius: $radius
-    // gradient(lighten($border-color, 10) 8%, $border-color 54%)
+    gradient(lighten($border-color, 10) 8%, $border-color 54%)
     box-shadow: 4px 4px 1px rgba(0,0,0,0.1), inset 3px 3px 3px rgb(255,255,255)
     padding: 10px
     
