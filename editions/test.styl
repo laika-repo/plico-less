@@ -1,0 +1,33 @@
+.test 
+  .header
+    margin-bottom: 50px
+  
+    h1
+      margin: 15px 0 20px
+      font-size: 200%
+      line-height: 120%
+      stroke(2px, #000)
+    
+    h2
+      margin-bottom: 20px
+      text-transform: none
+      text-shadow: none
+      font-weight: normal
+      font-size: 137.5%
+      color: darken($color, 10)
+  
+  .answer, .result
+    frame(15px)
+    margin-bottom: 20px;
+    
+    &:not(.result)
+      cursor: pointer
+    
+    .content
+      text-align: center
+      
+      p
+        border-radius: 12px
+        color: black
+        padding: 30px
+        background-color: white
